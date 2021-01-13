@@ -1,0 +1,35 @@
+Creating a Bounty Point Calculator Tool for DAoC
+
+Will do the following:
+- Have a UI that is easy to use an understand
+- Display any item available for a given slot.
+- Base item details:
+	- Realm
+		- Hibernia, Albion, Midgard
+	- Slot
+		- Ring, Bracer, Belt, Gem, Necklace, Cloak, Weapon (One-Handed, Two-Handed, Ranged, Staff), Shield, Armor (Head, Arms, Hands, Chest, Legs,Feet
+	- Category
+		- Darkness, Curse, Seasonal, Frozen, Pictslayer, Otherworldly
+- Recipe Details
+	- Main Recipe
+		- Darkness	.
+		- Curse		.
+		- Seasonal	.
+		- Frozen	.
+		- Pictslayer	.
+		- Otherworldly	.
+	- Item Mold
+		- Accessory	.
+		- Armor		.
+		- Weapon	.
+	- Alchemy Materials and Counts
+		- Ancient Mirror
+		- Ancient Pure Mercury
+		- Enriched Quicksilver
+		- Ancient Troll Blood
+		- Ancient Giant Blood
+		- Ancient Crushed Focus Stone
+		- Ancient Necrotic Brain Fluid
+		- Ancient Lich Tooth
+
+- Need to save or modify existing items in database / json file.
