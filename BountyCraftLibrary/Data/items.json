@@ -1,0 +1,459 @@
+[
+    {
+        "Name": "Midwinter's Frozen Medal of Honor",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 5,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Giant Blood": 2
+        }
+    },
+    {
+        "Name": "Ghostly Medal of Valor",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 15,
+        "Stardust": 4,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Giant Blood": 4
+        }
+    },
+    {
+        "Name": "Midsummer's Medal of Valor",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 5,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Giant Blood": 2
+        }
+    },
+    {
+        "Name": "Midsummer's Triumphant Wrap",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 15,
+        "Stardust": 4,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Giant Blood": 4
+        }
+    },
+    {
+        "Name": "Gem of the Harbinger",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 10,
+        "Stardust": 3,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Crushed Focus Stone": 4
+        }
+    },
+    {
+        "Name": "Emerald of the Harbinger",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 10,
+        "Stardust": 3,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Crushed Focus Stone": 4
+        }
+    },
+    {
+        "Name": "Ruby of the Harbinger",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 10,
+        "Stardust": 3,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Crushed Focus Stone": 4
+        }
+    },
+    {
+        "Name": "Spinal of the Harbinger",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 10,
+        "Stardust": 3,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Crushed Focus Stone": 4
+        }
+    },
+    {
+        "Name": "Citrine of the Harbinger",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 10,
+        "Stardust": 3,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Crushed Focus Stone": 4
+        }
+    },
+    {
+        "Name": "Amethyst of the Harbinger",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 10,
+        "Stardust": 3,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Crushed Focus Stone": 4
+        }
+    },
+    {
+        "Name": "Topaz of the Harbinger",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 10,
+        "Stardust": 3,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Crushed Focus Stone": 4
+        }
+    },
+    {
+        "Name": "Sapphire of the Harbinger",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 10,
+        "Stardust": 3,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Crushed Focus Stone": 4
+        }
+    },
+    {
+        "Name": "Majestic Mantle of Samhain",
+        "Realm": "Hibernia",
+        "Mold_type": "Armor",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Enriched Quicksilver": 2
+        }
+    },
+    {
+        "Name": "Battled Mantle of Samhain",
+        "Realm": "Hibernia",
+        "Mold_type": "Armor",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Enriched Quicksilver": 2
+        }
+    },
+    {
+        "Name": "Striking Mantle of Samhain",
+        "Realm": "Hibernia",
+        "Mold_type": "Armor",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Mirror": 2
+        }
+    },
+    {
+        "Name": "Glittering Mantle of Samhain",
+        "Realm": "Hibernia",
+        "Mold_type": "Armor",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Pure Mercury": 2
+        }
+    },
+    {
+        "Name": "Melodic Mantle of Samhain",
+        "Realm": "Hibernia",
+        "Mold_type": "Armor",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Troll Blood": 2
+        }
+    },
+    {
+        "Name": "Empowering Mantle of Samhain",
+        "Realm": "Hibernia",
+        "Mold_type": "Armor",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Ancient Troll Blood": 2
+        }
+    },
+    {
+        "Name": "Fierce Mantle of Samhain",
+        "Realm": "Hibernia",
+        "Mold_type": "Armor",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Seasonal",
+        "Alchemy": {
+            "Enriched Quicksilver": 2
+        }
+    },
+    {
+        "Name": "Mighty Belt of the Vigilant",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 4,
+        "Stardust": 2,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Giant Blood": 2
+        }
+    },
+    {
+        "Name": "Arcane Sash of the Vigilant",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 4,
+        "Stardust": 2,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Giant Blood": 2
+        }
+    },
+    {
+        "Name": "Adept Belt of the Vigilant",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 4,
+        "Stardust": 2,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Giant Blood": 2
+        }
+    },
+    {
+        "Name": "Curative Sash of the Vigilant",
+        "Realm": "All",
+        "Mold_type": "Accessory",
+        "Mold_quantity": 4,
+        "Stardust": 2,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Giant Blood": 2
+        }
+    },
+    {
+        "Name": "Pictslayer Blade",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Rapier",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Mace",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Runic Mace",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Great Blade",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Shillelagh",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Spear",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Scythe",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Defender",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Heater Shield",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Small Shield",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Buckler",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Fist Wrap",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Dirge",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Recurve Bow",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Gnarled Staff",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    },
+    {
+        "Name": "Pictslayer Weighted Staff",
+        "Realm": "Hibernia",
+        "Mold_type": "Weapon",
+        "Mold_quantity": 1,
+        "Stardust": 1,
+        "Recipe": "Pictslayer",
+        "Alchemy": {
+            "Ancient Necrotic Brain Fluid": 1,
+            "Ancient Lich Tooth": 1
+        }
+    }
+]
