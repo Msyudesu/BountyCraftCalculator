@@ -16,3 +16,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.dashboard-card {
+    background-color: darkslategray;
+    border-color: darkslategray;
+}
+
+.dashboard-card:hover {
+    background-color: slategray;
+    border-color: slategray;
+}
