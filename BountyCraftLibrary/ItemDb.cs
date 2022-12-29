@@ -4,7 +4,7 @@ namespace BountyCraftLibrary
 {
     public static class ItemDb
     {
-        public static List<Item>? Items { get; set; }
+        public static List<IItem>? Items { get; set; }
 
         private const string item_jsonpath = "~/Data/items.json";
 
@@ -14,7 +14,7 @@ namespace BountyCraftLibrary
             {
                 using (StreamReader r = new StreamReader(item_jsonpath))
                 {
-                    Items = JsonSerializer.Deserialize<List<Item>>(r.ReadToEnd());
+                    Items = JsonSerializer.Deserialize<List<IItem>>(r.ReadToEnd());
                 }
             }
             catch (FileNotFoundException)
