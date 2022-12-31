@@ -18,5 +18,6 @@ namespace BountyCraftLibrary
         public int FirstAlchemyItemQty { get; set; }
         public string SecondAlchemyItem { get; set; }
         public int SecondAlchemyItemQty { get; set; }
+        public string ItemXML { get; set; }
     }
 }

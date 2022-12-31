@@ -1,7 +1,10 @@
-﻿namespace BountyCraftLibrary
+﻿
+
+namespace BountyCraftLibrary
 {
     public class Item : IItem
-    { 
+    {
+        #region Properties
         public string Name { get; set; }
         public string Realm { get; set; }
         public string MoldType { get; set; }
@@ -12,6 +15,8 @@
         public int FirstAlchemyItemQty { get; set; }
         public string SecondAlchemyItem { get; set; }
         public int SecondAlchemyItemQty { get; set; }
+        public string ItemXML { get; set; }
+        #endregion
 
         public Item()
         {
@@ -30,6 +35,7 @@
             this.SecondAlchemyItem = alch2;
             this.FirstAlchemyItemQty = alch1qty;
             this.SecondAlchemyItemQty = alch2qty;
+            this.ItemXML = Details.GetItemXML(this);
         }
     }
 }

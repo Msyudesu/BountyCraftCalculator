@@ -1,4 +1,6 @@
-﻿namespace BountyCraftLibrary
+﻿using System.Xml.Serialization;
+
+namespace BountyCraftLibrary
 {
     public static class Details
     {
@@ -60,5 +62,15 @@
             { "Frozen"        , 150000 },
             { "Curse"         , 175000 }
         };
+
+        public static string GetItemXML(IItem item)
+        {
+            XmlSerializer xml = new XmlSerializer(item.GetType());
+            using (StringWriter sw = new StringWriter())
+            {
+                xml.Serialize(sw, item);
+                return sw.ToString();
+            }
+        }
     }
 }
