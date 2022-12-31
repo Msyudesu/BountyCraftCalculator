@@ -14,6 +14,9 @@ namespace BountyCraftLibrary
         public int MoldQuantity { get; set; }
         public int Stardust { get; set; }
         public string Recipe { get; set; }
-        public Dictionary<string, int> Alchemy { get; set; }
+        public string FirstAlchemyItem { get; set; }
+        public int FirstAlchemyItemQty { get; set; }
+        public string SecondAlchemyItem { get; set; }
+        public int SecondAlchemyItemQty { get; set; }
     }
 }
