@@ -16,8 +16,8 @@ namespace BountyCraftLibrary
         public string Recipe { get; set; }
         public string FirstAlchemyItem { get; set; }
         public int FirstAlchemyItemQty { get; set; }
-        public string SecondAlchemyItem { get; set; }
-        public int SecondAlchemyItemQty { get; set; }
+        public string? SecondAlchemyItem { get; set; }
+        public int? SecondAlchemyItemQty { get; set; }
         public string ItemXML { get; set; }
     }
 }

@@ -17,7 +17,7 @@
                         <br />
                         <label class="form-label form-control bg-dark mb-1" style="color: white;" >Mold Type</label>
                         <br />
-                        <label class="form-label form-control bg-dark mb-1" style="color: white;" >Quantity</label>
+                        <label class="form-label form-control bg-dark mb-1" style="color: white;" >Mold Quantity</label>
                         <br />
                         <label class="form-label form-control bg-dark mb-1" style="color: white;">Stardust Quantity</label>
                         <br />
@@ -33,7 +33,7 @@
                         <select class="form-select" asp-for="newItem.FirstAlchemyItem">
                             @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
                             {
-                                <option value="alch">@alch</option>
+                                <option value="@alch">@alch</option>
                             }
                         </select>
                         <br />
@@ -41,7 +41,7 @@
                             <select class="form-select" asp-for="newItem.SecondAlchemyItem">
                             @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
                             {
-                                <option value="alch">@alch</option>
+                                <option value="@alch">@alch</option>
                             }
                         </select>
                         <br />
@@ -53,21 +53,21 @@
                         <select class="form-select" asp-for="newItem.Realm">
                             @foreach (var realm in BountyCraftLibrary.Details.Realms)
                             {
-                                <option value="realm">@realm</option>
+                                <option value="@realm">@realm</option>
                             }
                         </select>
                         <br />
                         <select class="form-select" asp-for="newItem.Recipe">
                             @foreach (var recipe in BountyCraftLibrary.Details.Recipes)
                             {
-                                <option value="recipe.Key">@recipe.Key</option>
+                                <option value="@recipe.Key">@recipe.Key</option>
                             }
                         </select>
                         <br />
                         <select class="form-select" asp-for="newItem.MoldType">
                             @foreach (var mold in BountyCraftLibrary.Details.Molds)
                             {
-                                <option value="mold.Key">@mold.Key</option>
+                                <option value="@mold.Key">@mold.Key</option>
                             }
                         </select>
                         <br />
