@@ -2,3 +2,94 @@
 @model BountyCraftRazorApp.Pages.CreateItemModel
 @{
 }
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form method="post">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label form-control bg-dark mb-1" style="color: white;" >Item Name:</label>
+                        <br />
+                        <label class="form-label form-control bg-dark mb-1" style="color: white;" >Realm</label>
+                        <br />
+                        <label class="form-label form-control bg-dark mb-1" style="color: white;" >Recipe</label>
+                        <br />
+                        <label class="form-label form-control bg-dark mb-1" style="color: white;" >Mold Type</label>
+                        <br />
+                        <label class="form-label form-control bg-dark mb-1" style="color: white;" >Quantity</label>
+                        <br />
+                        <label class="form-label form-control bg-dark mb-1" style="color: white;">Stardust Quantity</label>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <h5>Alchemy Materials</h5>
+                            </div>
+                            <div class="col">
+                                <p>Has two: <input type="checkbox" class="form-check hasTwoMats" name="HasTwoMats_question" value="0" /></p>
+                            </div>
+                        </div>
+                        <br />
+                        <select class="form-select" asp-for="newItem.FirstAlchemyItem">
+                            @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
+                            {
+                                <option value="alch">@alch</option>
+                            }
+                        </select>
+                        <br />
+                        <fieldset class="secondAlchMat">
+                            <select class="form-select" asp-for="newItem.SecondAlchemyItem">
+                            @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
+                            {
+                                <option value="alch">@alch</option>
+                            }
+                        </select>
+                        <br />
+                        </fieldset>
+                    </div>
+                    <div class="col">
+                        <input class="form-text form-control" type="text" asp-for="newItem.Name" placeholder="Enter Item Name here..." />
+                        <br />
+                        <select class="form-select" asp-for="newItem.Realm">
+                            @foreach (var realm in BountyCraftLibrary.Details.Realms)
+                            {
+                                <option value="realm">@realm</option>
+                            }
+                        </select>
+                        <br />
+                        <select class="form-select" asp-for="newItem.Recipe">
+                            @foreach (var recipe in BountyCraftLibrary.Details.Recipes)
+                            {
+                                <option value="recipe.Key">@recipe.Key</option>
+                            }
+                        </select>
+                        <br />
+                        <select class="form-select" asp-for="newItem.MoldType">
+                            @foreach (var mold in BountyCraftLibrary.Details.Molds)
+                            {
+                                <option value="mold.Key">@mold.Key</option>
+                            }
+                        </select>
+                        <br />
+                        <input class="form-text form-control text-center w-25" type="text" asp-for="newItem.MoldQuantity" placeholder="0" />
+                        <br />
+                        <input class="form-text form-control text-center w-25" type="text" asp-for="newItem.Stardust" placeholder="0" />
+                        <br /><br /><br /><br /><br />
+                        <input class="form-text form-control text-center w-25" type="text" asp-for="newItem.FirstAlchemyItemQty" placeholder="0" />
+                        <br />
+                        <fieldset class="secondAlchMat">
+                        <input class="form-text form-control text-center w-25" type="text" asp-for="newItem.SecondAlchemyItemQty" placeholder="0" />
+                        <br />
+                        </fieldset>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Create Item</button>
+            </form>
+        </div>
+        <div class="col">
+            <h5>Enter Item Information:</h5>
+            <p>All fields must be filled out.</p>
+        </div>
+    </div>
+</div>

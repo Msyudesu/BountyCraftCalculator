@@ -2,6 +2,9 @@
 
 namespace BountyCraftLibrary
 {
+    /// <summary>
+    /// All Item Data stored in Json format locally in "items.json".
+    /// </summary>
     public static class ItemDb
     {
         public static List<IItem>? Items { get; set; }

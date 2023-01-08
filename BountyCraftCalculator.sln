@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BountyCraftLibrary", "Bount
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BountyCraftRazorApp", "BountyCraftRazorApp\BountyCraftRazorApp.csproj", "{88C535FC-0784-4FEA-9E09-3C1D1DB45A54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BountyCraftLibraryTests", "BountyCraftLibraryTests\BountyCraftLibraryTests.csproj", "{E2586D4C-491D-425B-9429-55504E9937A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BountyCraftLibraryTests", "BountyCraftLibraryTests\BountyCraftLibraryTests.csproj", "{E2586D4C-491D-425B-9429-55504E9937A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
