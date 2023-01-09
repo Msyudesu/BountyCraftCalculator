@@ -1,4 +1,20 @@
 ﻿@page
 @model BountyCraftRazorApp.Pages.InventoryModel
 @{
+    ViewData["Title"] = "Inventory";
 }
+<h1>Inventory</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-2">
+            @foreach(var item in InventoryModel.Items)
+            {
+                <div class="col-4 mb-2 card dashboard-card">
+                    <div class="card-body">
+                        <p>@item.Name</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,6 +1,4 @@
-﻿
-
-namespace BountyCraftRazorApp.Data
+﻿namespace BountyCraftRazorApp.Data
 {
     public class ApplicationDbContext
     {

@@ -17,6 +17,14 @@ body {
   margin-bottom: 60px;
 }
 
+table, td, th {
+    text-align: left;
+}
+
+td {
+    vertical-align: middle;
+}
+
 .dashboard-card {
     background-color: darkslategray;
     border-color: darkslategray;

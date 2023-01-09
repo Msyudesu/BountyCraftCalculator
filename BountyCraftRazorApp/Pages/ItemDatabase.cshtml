@@ -1,78 +1,46 @@
 ﻿@page
 @model BountyCraftRazorApp.Pages.ItemDatabaseModel
 @{
+    ViewData["Title"] = "Item Database";
 }
 
 <div class="container">
-    <table class="table" style="color: white">
+    <table class="table table-sm table-responsive-sm table-dark" style="color: white">
         <thead>
             <tr>
-                <th>
-                    Item Name
-                </th>
-                <th>
-                    Realm
-                </th>
-                <th>
-                    Recipe
-                </th>
-                <th>
-                    Mold Type
-                </th>
-                <th>
-                    Mold Quantity
-                </th>
-                <th>
-                    Stardust
-                </th>
-                <th>
-                    Alch. Mat 1
-                </th>
-                <th>
-                    Quantity
-                </th>
-                <th>
-                    Alch. Mat 2
-                </th>
-                <th>
-                    Quantity
-                </th>
+                <th>Item Name</th>
+                <th>Realm</th>
+                <th>Recipe</th>
+                <th>Mold Type</th>
+                <th>Mold Quantity</th>
+                <th>Stardust</th>
+                <th>Alch. Mat 1</th>
+                <th>Quantity</th>
+                <th>Alch. Mat 2</th>
+                <th>Quantity</th>
+                <th>Add</th>
             </tr>
         </thead>
         <tbody>
              @foreach (var item in ItemDatabaseModel.Items)
             {
                 <tr>
-                    <td>
-                        @item.Name
-                    </td>
-                    <td>
-                        @item.Realm
-                    </td>
-                    <td>
-                        @item.Recipe
-                    </td>
-                    <td>
-                       @item.MoldType
-                    </td>
-                    <td>
-                       @item.MoldQuantity
-                    </td>
-                    <td>
-                       @item.Stardust
-                    </td>
-                    <td>
-                       @item.FirstAlchemyItem
-                    </td>
-                    <td>
-                        @item.FirstAlchemyItemQty
-                    </td>
-                    <td>
-                        @item.SecondAlchemyItem
-                    </td>
-                    <td>
-                        @item.SecondAlchemyItemQty
-                    </td>
+                    <form method="post">
+                        <td>@item.Name</td>
+                        <td>@item.Realm</td>
+                        <td>@item.Recipe</td>
+                        <td>@item.MoldType</td>
+                        <td>@item.MoldQuantity</td>
+                        <td>@item.Stardust</td>
+                        <td>@item.FirstAlchemyItem</td>
+                        <td>@item.FirstAlchemyItemQty</td>
+                        <td>@item.SecondAlchemyItem</td>
+                        <td>@item.SecondAlchemyItemQty</td>
+                        <td>
+                            <button data-target="@ItemDatabaseModel.Items[ItemDatabaseModel.Items.IndexOf(item)]"
+                            class="btn btn-success btn-xs" type="submit">Add Item</button>
+                        </td>
+                    </form>
                 </tr>
             }
         </tbody>

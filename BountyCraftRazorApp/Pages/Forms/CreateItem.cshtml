@@ -1,6 +1,7 @@
-﻿@page
-@model BountyCraftRazorApp.Pages.CreateItemModel
+﻿@page "/Forms/CreateItem"
+@model BountyCraftRazorApp.Pages.Forms.CreateItemModel
 @{
+    ViewData["Title"] = "Create New Item";
 }
 
 <div class="container">
@@ -10,6 +11,8 @@
                 <div class="row">
                     <div class="col">
                         <label class="form-label form-control bg-dark mb-1" style="color: white;" >Item Name:</label>
+                        <br />
+                        <label class="form-label form-control bg-dark mb-1" style="color: white;">Item Category:</label>
                         <br />
                         <label class="form-label form-control bg-dark mb-1" style="color: white;" >Realm</label>
                         <br />
@@ -30,55 +33,60 @@
                             </div>
                         </div>
                         <br />
-                        <select class="form-select" asp-for="newItem.FirstAlchemyItem">
+                        <select class="form-select" asp-for="NewItem.FirstAlchemyItem">
                             @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
                             {
                                 <option value="@alch">@alch</option>
                             }
                         </select>
                         <br />
-                        <fieldset class="secondAlchMat">
-                            <select class="form-select" asp-for="newItem.SecondAlchemyItem">
-                            @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
-                            {
-                                <option value="@alch">@alch</option>
-                            }
+                        <select class="form-select secondAlchMat" name="secondAlchSelect" asp-for="NewItem.SecondAlchemyItem">
+                        @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
+                        {
+                            <option default="" value="@alch">@alch</option>
+                        }
                         </select>
                         <br />
-                        </fieldset>
                     </div>
                     <div class="col">
-                        <input class="form-text form-control" type="text" asp-for="newItem.Name" placeholder="Enter Item Name here..." />
+                        <input class="form-text form-control" type="text" asp-for="NewItem.Name" placeholder="Enter Item Name here..." />
                         <br />
-                        <select class="form-select" asp-for="newItem.Realm">
+                        <select class="form-select" asp-for="NewItem.Category">
+                            @foreach (var category in BountyCraftLibrary.Details.Categories)
+                            {
+                                <option value="@category">@category</option>
+                            }
+                        </select>
+                        <br />
+                        <select class="form-select" asp-for="NewItem.Realm">
                             @foreach (var realm in BountyCraftLibrary.Details.Realms)
                             {
                                 <option value="@realm">@realm</option>
                             }
                         </select>
                         <br />
-                        <select class="form-select" asp-for="newItem.Recipe">
+                        <select class="form-select" asp-for="NewItem.Recipe">
                             @foreach (var recipe in BountyCraftLibrary.Details.Recipes)
                             {
                                 <option value="@recipe.Key">@recipe.Key</option>
                             }
                         </select>
                         <br />
-                        <select class="form-select" asp-for="newItem.MoldType">
+                        <select class="form-select" asp-for="NewItem.MoldType">
                             @foreach (var mold in BountyCraftLibrary.Details.Molds)
                             {
                                 <option value="@mold.Key">@mold.Key</option>
                             }
                         </select>
                         <br />
-                        <input class="form-text form-control text-center w-25" type="text" asp-for="newItem.MoldQuantity" placeholder="0" />
+                        <input class="form-text form-control text-center w-25" type="text" asp-for="NewItem.MoldQuantity" placeholder="0" />
                         <br />
-                        <input class="form-text form-control text-center w-25" type="text" asp-for="newItem.Stardust" placeholder="0" />
+                        <input class="form-text form-control text-center w-25" type="text" asp-for="NewItem.Stardust" placeholder="0" />
                         <br /><br /><br /><br /><br />
-                        <input class="form-text form-control text-center w-25" type="text" asp-for="newItem.FirstAlchemyItemQty" placeholder="0" />
+                        <input class="form-text form-control text-center w-25" type="text" asp-for="NewItem.FirstAlchemyItemQty" placeholder="0" />
                         <br />
                         <fieldset class="secondAlchMat">
-                        <input class="form-text form-control text-center w-25" type="text" asp-for="newItem.SecondAlchemyItemQty" placeholder="0" />
+                        <input class="form-text form-control text-center w-25 secondAlchMat" name="secondAlchQty" type="text" asp-for="NewItem.SecondAlchemyItemQty" placeholder="0" />
                         <br />
                         </fieldset>
                     </div>

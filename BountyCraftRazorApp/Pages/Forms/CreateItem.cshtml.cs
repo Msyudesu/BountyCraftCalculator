@@ -1,15 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using BountyCraftLibrary;
-using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using BountyCraftRazorApp.Models;
 
-namespace BountyCraftRazorApp.Pages
+namespace BountyCraftRazorApp.Pages.Forms
 {
     public class CreateItemModel : PageModel
     {
         [BindProperty]
-        public ItemModel newItem { get; set; }
+        public ItemModel NewItem { get; set; } = new ItemModel();
 
         public void OnGet()
         {
@@ -17,8 +15,8 @@ namespace BountyCraftRazorApp.Pages
         }
         public IActionResult OnPost()
         {
-            ItemDatabaseModel.Items.Add(newItem);
-            return RedirectToPage("ItemDatabase");
+            if (NewItem != null) ItemDatabaseModel.Items.Add(NewItem);
+            return RedirectToPage("/ItemDatabase");
         }
     }
 }
