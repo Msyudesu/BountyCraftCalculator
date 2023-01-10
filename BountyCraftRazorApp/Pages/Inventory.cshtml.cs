@@ -8,9 +8,16 @@ namespace BountyCraftRazorApp.Pages
     {
         public static List<IItem> Items = new List<IItem>();
 
-        public void OnGet()
+        public void OnGet(int id, bool add)
         {
-
+            if (add)
+            {
+                Items.Add(ItemDatabaseModel.Items[id]);
+            }
+            else
+            {
+                Items.Remove(ItemDatabaseModel.Items[id]);
+            }
         }
     }
 }

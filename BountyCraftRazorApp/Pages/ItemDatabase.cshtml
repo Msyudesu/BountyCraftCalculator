@@ -25,22 +25,19 @@
              @foreach (var item in ItemDatabaseModel.Items)
             {
                 <tr>
-                    <form method="post">
-                        <td>@item.Name</td>
-                        <td>@item.Realm</td>
-                        <td>@item.Recipe</td>
-                        <td>@item.MoldType</td>
-                        <td>@item.MoldQuantity</td>
-                        <td>@item.Stardust</td>
-                        <td>@item.FirstAlchemyItem</td>
-                        <td>@item.FirstAlchemyItemQty</td>
-                        <td>@item.SecondAlchemyItem</td>
-                        <td>@item.SecondAlchemyItemQty</td>
-                        <td>
-                            <button data-target="@ItemDatabaseModel.Items[ItemDatabaseModel.Items.IndexOf(item)]"
-                            class="btn btn-success btn-xs" type="submit">Add Item</button>
-                        </td>
-                    </form>
+                    <td>@item.Name</td>
+                    <td>@item.Realm</td>
+                    <td>@item.Recipe</td>
+                    <td>@item.MoldType</td>
+                    <td>@item.MoldQuantity</td>
+                    <td>@item.Stardust</td>
+                    <td>@item.FirstAlchemyItem</td>
+                    <td>@item.FirstAlchemyItemQty</td>
+                    <td>@item.SecondAlchemyItem</td>
+                    <td>@item.SecondAlchemyItemQty</td>
+                    <td>
+                        <a class="btn btn-success" href="~/Inventory?id=@ItemDatabaseModel.Items.IndexOf(item)&add=true">Add Item</a>
+                    </td>
                 </tr>
             }
         </tbody>

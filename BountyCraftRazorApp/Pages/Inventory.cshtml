@@ -5,16 +5,41 @@
 }
 <h1>Inventory</h1>
 <div class="container">
-    <div class="row">
-        <div class="col-12 mb-2">
-            @foreach(var item in InventoryModel.Items)
+    <table class="table table-sm table-responsive-sm table-dark" style="color: white">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Realm</th>
+                <th>Recipe</th>
+                <th>Mold Type</th>
+                <th>Mold Quantity</th>
+                <th>Stardust</th>
+                <th>Alch. Mat 1</th>
+                <th>Quantity</th>
+                <th>Alch. Mat 2</th>
+                <th>Quantity</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in InventoryModel.Items)
             {
-                <div class="col-4 mb-2 card dashboard-card">
-                    <div class="card-body">
-                        <p>@item.Name</p>
-                    </div>
-                </div>
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Realm</td>
+                    <td>@item.Recipe</td>
+                    <td>@item.MoldType</td>
+                    <td>@item.MoldQuantity</td>
+                    <td>@item.Stardust</td>
+                    <td>@item.FirstAlchemyItem</td>
+                    <td>@item.FirstAlchemyItemQty</td>
+                    <td>@item.SecondAlchemyItem</td>
+                    <td>@item.SecondAlchemyItemQty</td>
+                    <td>
+                        <a class="btn btn-close" href="~/Inventory?id=@InventoryModel.Items.IndexOf(item)&add=false">Remove</a>
+                    </td>
+                </tr>
             }
-        </div>
-    </div>
+        </tbody>
+    </table>
 </div>
