@@ -36,7 +36,7 @@
                     <td>@item.SecondAlchemyItem</td>
                     <td>@item.SecondAlchemyItemQty</td>
                     <td>
-                        <a class="btn btn-close" href="~/Inventory?id=@InventoryModel.Items.IndexOf(item)&add=false">Remove</a>
+                        <a class="btn btn-close" href="~/Inventory?id=@item.ID&add=false" style="color: red"></a>
                     </td>
                 </tr>
             }

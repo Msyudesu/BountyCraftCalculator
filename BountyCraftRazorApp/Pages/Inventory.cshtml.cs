@@ -12,11 +12,11 @@ namespace BountyCraftRazorApp.Pages
         {
             if (add)
             {
-                Items.Add(ItemDatabaseModel.Items[id]);
+                Items.Add(ItemDatabaseModel.Items.Where(item => item.ID == id).First());
             }
             else
             {
-                Items.Remove(ItemDatabaseModel.Items[id]);
+                Items = Items.Where(item => item.ID != id).ToList();
             }
         }
     }

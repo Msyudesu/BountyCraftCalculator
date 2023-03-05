@@ -3,6 +3,7 @@
     public class Item : IItem
     {
         #region Properties
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
         public string Realm { get; set; }
@@ -22,8 +23,9 @@
             
         }
 
-        public Item(string name, string category, string realm, string mold_type, int mold_quantity, int stardust, string recipe, string alch1, int alch1qty, string alch2, int alch2qty)
+        public Item(int id, string name, string category, string realm, string mold_type, int mold_quantity, int stardust, string recipe, string alch1, int alch1qty, string alch2, int alch2qty)
         {
+            ID = id;
             Name = name;
             Category = category;
             Realm = realm;

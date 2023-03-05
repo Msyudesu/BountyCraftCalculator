@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col">
             <form method="post">
-                <div class="row">
+                <div class="row align-items-center mb-2 mt-2 pd-2">
                     <div class="col">
                         <label class="form-label form-control bg-dark mb-1" style="color: white;" >Item Name:</label>
                         <br />
@@ -24,27 +24,18 @@
                         <br />
                         <label class="form-label form-control bg-dark mb-1" style="color: white;">Stardust Quantity</label>
                         <br />
-                        <div class="row">
-                            <div class="col">
-                                <h5>Alchemy Materials</h5>
-                            </div>
-                            <div class="col">
-                                <p>Has two: <input type="checkbox" class="form-check hasTwoMats" name="HasTwoMats_question" value="0" /></p>
-                            </div>
-                        </div>
-                        <br />
                         <select class="form-select" asp-for="NewItem.FirstAlchemyItem">
                             @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
                             {
-                                <option value="@alch">@alch</option>
+                                <option value="">@alch</option>
                             }
                         </select>
                         <br />
-                        <select class="form-select secondAlchMat" name="secondAlchSelect" asp-for="NewItem.SecondAlchemyItem">
-                        @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
-                        {
-                            <option default="" value="@alch">@alch</option>
-                        }
+                        <select class="form-select" asp-for="NewItem.SecondAlchemyItem">
+                            @foreach (var alch in BountyCraftLibrary.Details.AlchemyMats)
+                            {
+                                <option value="">@alch</option>
+                            }
                         </select>
                         <br />
                     </div>
@@ -82,13 +73,11 @@
                         <input class="form-text form-control text-center w-25" type="text" asp-for="NewItem.MoldQuantity" placeholder="0" />
                         <br />
                         <input class="form-text form-control text-center w-25" type="text" asp-for="NewItem.Stardust" placeholder="0" />
-                        <br /><br /><br /><br /><br />
+                        <br />
                         <input class="form-text form-control text-center w-25" type="text" asp-for="NewItem.FirstAlchemyItemQty" placeholder="0" />
                         <br />
-                        <fieldset class="secondAlchMat">
-                        <input class="form-text form-control text-center w-25 secondAlchMat" name="secondAlchQty" type="text" asp-for="NewItem.SecondAlchemyItemQty" placeholder="0" />
+                        <input class="form-text form-control text-center w-25" type="text" asp-for="NewItem.SecondAlchemyItemQty" placeholder="0" />
                         <br />
-                        </fieldset>
                     </div>
                 </div>
 
