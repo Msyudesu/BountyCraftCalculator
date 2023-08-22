@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BountyCraft
+﻿namespace BountyCraft
 {
     public interface IItem
     {
+        #region Properties
         public int ID { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
@@ -20,5 +15,6 @@ namespace BountyCraft
         public int FirstAlchemyItemQty { get; set; }
         public string SecondAlchemyItem { get; set; }
         public int SecondAlchemyItemQty { get; set; }
+        #endregion
     }
 }

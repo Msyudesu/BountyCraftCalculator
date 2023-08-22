@@ -6,10 +6,14 @@ namespace BountyCraft
 {
     public class Inventory
     {
-        public int ID { get; set; }
+        public List<Item> Selections { get; set; }
+        public Dictionary<string, int> AlchemyMaterialsNeeded { get; set; }
 
-        public List<IItem> Selections { get; set; } = new List<IItem>();
-        public Dictionary<string, int> AlchemyMaterialsNeeded = new();
+        public Inventory() 
+        {
+            Selections = new List<Item>();
+            AlchemyMaterialsNeeded = new Dictionary<string, int>();
+        }
 
         public int Stardust { get; set; } = 0;
         public int BountypointsNeeded { get; set; } = 0;

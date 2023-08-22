@@ -66,7 +66,7 @@ namespace BountyCraft
             { "Curse"         , 175000 }
         };
 
-        public static string GetItemXML(IItem item)
+        public static string GetItemXML(Item item)
         {
             XmlSerializer xml = new XmlSerializer(item.GetType());
             using (StringWriter sw = new StringWriter())
