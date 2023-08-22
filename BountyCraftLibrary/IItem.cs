@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BountyCraftLibrary
+namespace BountyCraft
 {
     public interface IItem
     {
@@ -20,6 +20,5 @@ namespace BountyCraftLibrary
         public int FirstAlchemyItemQty { get; set; }
         public string SecondAlchemyItem { get; set; }
         public int SecondAlchemyItemQty { get; set; }
-        public string ItemXML { get; set; }
     }
 }

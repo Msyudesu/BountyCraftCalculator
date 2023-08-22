@@ -1,9 +1,12 @@
-﻿using System.Xml.Serialization;
+﻿using Azure.Core;
+using System.Xml.Serialization;
 
-namespace BountyCraftLibrary
+namespace BountyCraft
 {
-    public static class Details
+    public sealed class Details
     {
+        public static readonly Details Instance = new Details();
+
         public static readonly List<string> Categories = new List<string>()
         {
             "Seasonal",
@@ -52,7 +55,7 @@ namespace BountyCraftLibrary
             { "Accessory"   , 5000 },
             { "Armor"       , 6250 }
         };
-        public static readonly Dictionary<string, int> Recipes = new Dictionary<string, int>() 
+        public static readonly Dictionary<string, int> Recipes = new Dictionary<string, int>()
         {
             { "Darkness"      , 75000  },
             { "Pictslayer"    , 50000  },
@@ -71,6 +74,14 @@ namespace BountyCraftLibrary
                 xml.Serialize(sw, item);
                 return sw.ToString();
             }
+        }
+
+        public static string GoldAsString(long gold)
+        {
+            string _gold = gold.ToString();
+            while (_gold.Length < 10) { _gold = "0" + _gold; }
+
+            return $"{_gold[0..3]}p {_gold[3..6]}g {_gold[6..8]}s {_gold[8..10]}c";
         }
     }
 }

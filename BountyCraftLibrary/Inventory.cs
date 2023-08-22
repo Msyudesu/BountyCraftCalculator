@@ -2,30 +2,35 @@
 using System;
 using System.Collections.Generic;
 
-namespace BountyCraftLibrary
+namespace BountyCraft
 {
-    public static class Inventory
+    public class Inventory
     {
-        public static List<IItem> Selections { get; set; } = new List<IItem>();
-        public static int Stardust { get; set; } = 0;
-        public static int BountypointsNeeded { get; set; } = 0;
-        public static int GoldNeeded { get; set; } = 0;
-        public static Dictionary<string, int> AlchemyMaterialsNeeded = new Dictionary<string, int>();
+        public int ID { get; set; }
 
-        private const int stardust_cost = 12400000;
+        public List<IItem> Selections { get; set; } = new List<IItem>();
+        public Dictionary<string, int> AlchemyMaterialsNeeded = new();
 
-        public static void UpdateGoldCost()
+        public int Stardust { get; set; } = 0;
+        public int BountypointsNeeded { get; set; } = 0;
+        public long GoldNeeded { get; set; } = 0;
+        public string GoldAsString { get; set; } = "0000000000";
+
+        private const int STARDUST_COST = 12400000;
+
+        public void UpdateGoldCost()
         {
             GoldNeeded = 0;
-            Selections.ForEach(s => GoldNeeded += s.Stardust * stardust_cost);
+            Selections.ForEach(s => GoldNeeded += s.Stardust * STARDUST_COST);
+            GoldAsString = Details.GoldAsString(GoldNeeded);
         }
 
-        public static void UpdateBountyPointCost()
+        public void UpdateBountyPointCost()
         {
             BountypointsNeeded = 0;
             Selections.ForEach(s => BountypointsNeeded += Details.Recipes[s.Recipe] + Details.Molds[s.MoldType] * s.MoldQuantity);
         }
 
-        public static void ClearSelections() => Selections.Clear();
+        public void ClearSelections() => Selections.Clear();
     }
 }

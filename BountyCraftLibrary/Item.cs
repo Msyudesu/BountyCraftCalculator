@@ -1,4 +1,4 @@
-﻿namespace BountyCraftLibrary
+﻿namespace BountyCraft
 {
     public class Item : IItem
     {
@@ -15,12 +15,11 @@
         public int FirstAlchemyItemQty { get; set; }
         public string SecondAlchemyItem { get; set; }
         public int SecondAlchemyItemQty { get; set; }
-        public string ItemXML { get; set; }
         #endregion
 
         public Item()
         {
-            
+
         }
 
         public Item(int id, string name, string category, string realm, string mold_type, int mold_quantity, int stardust, string recipe, string alch1, int alch1qty, string alch2, int alch2qty)
@@ -37,7 +36,6 @@
             SecondAlchemyItem = alch2;
             FirstAlchemyItemQty = alch1qty;
             SecondAlchemyItemQty = alch2qty;
-            ItemXML = Details.GetItemXML(this);
         }
     }
 }
