@@ -1,6 +1,8 @@
 using BountyCraft.WebMVC7.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using BountyCraft.WebMVC7.Configurations;
 
 namespace BountyCraft.WebMVC7
 {
@@ -19,6 +21,9 @@ namespace BountyCraft.WebMVC7
 
             builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            builder.Services.AddAutoMapper(typeof(MapperConfig));
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

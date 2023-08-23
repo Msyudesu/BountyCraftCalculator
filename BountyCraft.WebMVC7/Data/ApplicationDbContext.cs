@@ -10,7 +10,7 @@ namespace BountyCraft.WebMVC7.Data
         {
         }
 
-        public DbSet<Profile> Profiles { get; set; }
+        public DbSet<BCProfile> Profiles { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<ProfileItem> ProfilesItem { get; set; }
     }

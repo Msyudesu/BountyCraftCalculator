@@ -1,29 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BountyCraft.WebMVC7.Data;
+using BountyCraft.WebMVC7.Models;
+using AutoMapper;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace BountyCraft.WebMVC7.Controllers
 {
     public class ProfilesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IMapper _profileMapper;
 
-        public ProfilesController(ApplicationDbContext context)
+        public ProfilesController(ApplicationDbContext context, IMapper profileMapper)
         {
             _context = context;
+            this._profileMapper = profileMapper;
         }
 
         // GET: Profiles
         public async Task<IActionResult> Index()
         {
-              return _context.Profiles != null ? 
-                          View(await _context.Profiles.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Profiles'  is null.");
+            if (_context.Profiles != null)
+            {
+                var profiles = _profileMapper.Map<List<ProfilesVM>>(await _context.Profiles.ToListAsync());
+
+                return View(profiles);
+            }
+            else
+            {
+                return Problem("Entity set 'ApplicationDbContext.Profiles'  is null.");
+            }         
         }
 
         // GET: Profiles/Details/5
@@ -55,15 +62,16 @@ namespace BountyCraft.WebMVC7.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,UserId,ProfileName,Description,DateCreated,DateModified")] Profile profile)
+        public async Task<IActionResult> Create(ProfilesVM profileVM)
         {
             if (ModelState.IsValid)
             {
+                var profile = _profileMapper.Map<BCProfile>(profileVM);
                 _context.Add(profile);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(profile);
+            return View(profileVM);
         }
 
         // GET: Profiles/Edit/5
@@ -79,7 +87,8 @@ namespace BountyCraft.WebMVC7.Controllers
             {
                 return NotFound();
             }
-            return View(profile);
+            var profileVM = _profileMapper.Map<ProfilesVM>(profile);
+            return View(profileVM);
         }
 
         // POST: Profiles/Edit/5
@@ -87,9 +96,9 @@ namespace BountyCraft.WebMVC7.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,UserId,ProfileName,Description,DateCreated,DateModified")] Profile profile)
+        public async Task<IActionResult> Edit(int id, ProfilesVM profileVM)
         {
-            if (id != profile.ID)
+            if (id != profileVM.ID)
             {
                 return NotFound();
             }
@@ -98,12 +107,13 @@ namespace BountyCraft.WebMVC7.Controllers
             {
                 try
                 {
+                    var profile = _profileMapper.Map<BCProfile>(profileVM);
                     _context.Update(profile);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProfileExists(profile.ID))
+                    if (!ProfileExists(profileVM.ID))
                     {
                         return NotFound();
                     }
@@ -114,7 +124,7 @@ namespace BountyCraft.WebMVC7.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(profile);
+            return View(profileVM);
         }
 
         // GET: Profiles/Delete/5

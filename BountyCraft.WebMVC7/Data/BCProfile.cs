@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BountyCraft.WebMVC7.Data
 {
-    public class Profile
+    public class BCProfile
     {
         public int ID { get; set; }
 

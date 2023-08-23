@@ -1,29 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BountyCraft.WebMVC7.Data;
+using BountyCraft.WebMVC7.Models;
+using AutoMapper;
 
 namespace BountyCraft.WebMVC7.Controllers
 {
     public class ItemsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IMapper _itemMapper;
 
-        public ItemsController(ApplicationDbContext context)
+        public ItemsController(ApplicationDbContext context, IMapper itemMapper)
         {
             _context = context;
+            this._itemMapper = itemMapper;
         }
 
         // GET: Items
         public async Task<IActionResult> Index()
         {
-              return _context.Items != null ? 
-                          View(await _context.Items.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Items'  is null.");
+            if (_context.Items != null)
+            {
+                var items = _itemMapper.Map<List<ItemsVM>>(await _context.Items.ToListAsync());
+
+                return View(items);
+            }
+            else
+            {
+                return Problem("Entity set 'ApplicationDbContext.Profiles'  is null.");
+            }
         }
 
         // GET: Items/Details/5
