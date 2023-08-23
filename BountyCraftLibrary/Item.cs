@@ -1,6 +1,6 @@
 ﻿namespace BountyCraft
 {
-    public class Item : IItem
+    public class Item
     {
         #region Properties
         public int ID { get; set; }

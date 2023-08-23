@@ -1,0 +1,81 @@
+﻿@model BountyCraft.WebMVC7.Data.Item
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Realm" class="control-label"></label>
+                <input asp-for="Realm" class="form-control" />
+                <span asp-validation-for="Realm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoldType" class="control-label"></label>
+                <input asp-for="MoldType" class="form-control" />
+                <span asp-validation-for="MoldType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoldQuantity" class="control-label"></label>
+                <input asp-for="MoldQuantity" class="form-control" />
+                <span asp-validation-for="MoldQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stardust" class="control-label"></label>
+                <input asp-for="Stardust" class="form-control" />
+                <span asp-validation-for="Stardust" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recipe" class="control-label"></label>
+                <input asp-for="Recipe" class="form-control" />
+                <span asp-validation-for="Recipe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstAlchemyItem" class="control-label"></label>
+                <input asp-for="FirstAlchemyItem" class="form-control" />
+                <span asp-validation-for="FirstAlchemyItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstAlchemyItemQty" class="control-label"></label>
+                <input asp-for="FirstAlchemyItemQty" class="form-control" />
+                <span asp-validation-for="FirstAlchemyItemQty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondAlchemyItem" class="control-label"></label>
+                <input asp-for="SecondAlchemyItem" class="form-control" />
+                <span asp-validation-for="SecondAlchemyItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondAlchemyItemQty" class="control-label"></label>
+                <input asp-for="SecondAlchemyItemQty" class="form-control" />
+                <span asp-validation-for="SecondAlchemyItemQty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
